@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+input {
+  border: medium none;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 11px 10px 9px;
+}
+
+.grouptop input {
+  margin-bottom: 0px;
+  border-bottom: 0px none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.groupbottom input {
+  margin-top: 0px;
+  border-top: 0px none;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  border: 0px none;
+  outline: 0px none;
+}
+
+body {
+  text-align: center;
+  background-color: gray;
+}
