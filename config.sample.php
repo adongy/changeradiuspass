@@ -7,7 +7,8 @@ $use_cas = true;
 $cas_host = 'example.com';
 $cas_port = 443;
 $cas_context = '';
-$cas_server_ca_cert_path = 'cachain.pem';
+//This is realtive to the login/ folder
+$cas_server_ca_cert_path = '../cachain.pem';
 
 $db_driver = 'mysql';
 $db_host = 'localhost';
