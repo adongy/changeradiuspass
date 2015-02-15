@@ -1,5 +1,8 @@
 <?php
 
+$app_name = 'ECLAIR';
+$app_logo = 'eclair.png';
+
 $use_cas = true;
 $cas_host = 'example.com';
 $cas_port = 443;

@@ -38,4 +38,6 @@ Warning
 
 This application does *not* work well when using CAS authentication and reverse proxies that change `REQUEST_URI`. This is because `phpCAS` uses `REQUEST_URI` to determine the login page url, but it is modified by the reverse proxy, causing a wrong redirection.
 
+It also uses absolute urls everywhere. It will only work in the root directory of your web server.
+
 [cas]: https://wiki.jasig.org/display/CASC/phpCAS

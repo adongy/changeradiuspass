@@ -5,7 +5,7 @@ require_once __DIR__.'/config.php';
 session_start();
 
 if (empty($_SESSION['user']) || !check_user($_SESSION['user'])) {
-	header('Location: login/');
+	header('Location: /login/');
     exit();
 }
 
@@ -27,11 +27,11 @@ if (!empty($_POST['pass']) && !empty($_POST['pass_confirm'])) {
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="pass.css">
+    <link rel="stylesheet" type="text/css" href="/pass.css">
     <title>Change your password</title>
   </head>
   <body>
-    <p><img src="eclair.png" alt="ECLAIR"/></p>
+    <p><img src="/<?php echo $app_logo; ?>" alt="<?php echo $app_name; ?>"/></p>
     <h2>Hello <b><?php echo $_SESSION['user']; ?></b>.</h2>
     <?php if (isset($msg)) { echo '<p>'.$msg.'</p>'; } ?>
     <p>
@@ -47,7 +47,7 @@ if (!empty($_POST['pass']) && !empty($_POST['pass_confirm'])) {
         </fieldset>
       </form>
     </p>
-    <p><a href="login/?logout=<?php echo $_SESSION['logged_in_from'] == 'cas' ? '&cas=' : '' ?>">Logout</a></p>
+    <p><a href="/login/?logout=<?php echo $_SESSION['logged_in_from'] == 'cas' ? '&cas=' : '' ?>">Logout</a></p>
     <!-- Développé pour ECLAIR par Anthony Dong -->
   </body>
 </html>

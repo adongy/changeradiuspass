@@ -39,12 +39,12 @@ if (isset($_REQUEST['logout'])) {
 }
 
 if (!empty($_SESSION['user'])) {
-        if (!check_user($_SESSION['user'])) {
-                $msg = 'Please register an account before trying to change your password.';
-        } else {
-                header('Location: ../');
-                exit();
-        }
+    if (!check_user($_SESSION['user'])) {
+        $msg = 'Please register an account before trying to change your password.';
+    } else {
+        header('Location: /');
+        exit();
+    }
 }
 
 ?>
@@ -52,11 +52,11 @@ if (!empty($_SESSION['user'])) {
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../pass.css">
+    <link rel="stylesheet" type="text/css" href="/pass.css">
     <title>Log in</title>
   </head>
   <body>
-    <p><img src="../eclair.png" alt="ECLAIR"/></p>
+    <p><img src="/<?php echo $app_logo; ?>" alt="<?php echo $app_name; ?>"/></p>
     <?php if (isset($msg)) { echo '<p>'.$msg.'</p>'; } ?>
     <p>
       <form action="." method="POST">
